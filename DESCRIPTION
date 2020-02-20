@@ -1,0 +1,9 @@
+Package: sos
+Title: Search Contributed R Packages, Sort by Package
+Version: 2.0-1
+Author: Spencer Graves, Sundar Dorai-Raj, and Romain Francois
+Maintainer: Spencer Graves <spencer.graves@prodsyse.com>
+Description: Search contributed R packages, sort by package.
+License: GPL (>= 2)
+Depends: brew
+Suggests: RODBC, WriteXLS, fda
