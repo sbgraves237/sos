@@ -7,3 +7,4 @@ Description: Search contributed R packages, sort by package.
 License: GPL (>= 2)
 Depends: brew
 Suggests: RODBC, WriteXLS, fda
+Language: en-us
