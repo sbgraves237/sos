@@ -1,3 +1,5 @@
+2.0-1:  Fix CRAN check pblms.  2020-10-18.
+
 2.0-0:  print.findFn produces 2 pages on the default web browser:  one row per (1) matching help page and (2) package with a match.  
 
 1.0-5:  RSiteSearch package name changed to 'sos'
