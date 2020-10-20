@@ -1,3 +1,4 @@
+2.0-2:  Delete inappropraite file and directory. 2020-10-19 
 2.0-1:  Fix CRAN check pblms.  2020-10-18.
 
 2.0-0:  print.findFn produces 2 pages on the default web browser:  one row per (1) matching help page and (2) package with a match.  
