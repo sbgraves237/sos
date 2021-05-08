@@ -1,5 +1,5 @@
 findFn <- function(string,
-                   maxPages = 50,
+                   maxPages = 100,
                    sortby = NULL,
                    verbose = 1, ...) {
   ###########################################
