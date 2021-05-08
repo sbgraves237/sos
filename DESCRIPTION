@@ -1,12 +1,12 @@
 Package: sos
 Title: Search Contributed R Packages, Sort by Package
-Version: 2.0-2
-Date: 2020-10-19
+Version: 2.0-3
+Date: 2021-05-07
 Author: Spencer Graves [cre, aut, cph], 
     Sundar Dorai-Raj [aut], and Romain Francois [ctb]
 Maintainer: Spencer Graves <spencer.graves@prodsyse.com>
 Description: Search contributed R packages, sort by package.
 License: GPL (>= 2)
-Depends: brew
+Depends: R (>= 4.0.5), brew
 Suggests: RODBC, WriteXLS, fda
 Language: en-us
