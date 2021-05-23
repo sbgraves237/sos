@@ -65,6 +65,9 @@ jobs:
           tinytex::parse_install(
              text = "!pdfTeX error: pdflatex.exe (file ucrr8a.pfb): cannot open Type 1 font file for reading"
           )
+          tinytex::parse_install(
+             text = "LaTeX errors: ! Font OML/zplm/m/it/10=zplmr7m at 10.0pt not loadable: Metric (TFM) file not found."
+          )
           install.packages('remotes')
           saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
           writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
