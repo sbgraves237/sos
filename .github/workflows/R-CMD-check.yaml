@@ -45,7 +45,6 @@ jobs:
 
       - name: Install tikz.tex and ks
         run: |
-          install.packages('ks')
           install.packages('tinytex') # Maybe tinytex is already there?
           tinytex::parse_install(
              text = "! LaTeX Error: File `tikz.sty' not found."
@@ -91,6 +90,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          install.packages('ks')
           remotes::install_deps(dependencies = TRUE)
           remotes::install_cran("rcmdcheck")
         shell: Rscript {0}
