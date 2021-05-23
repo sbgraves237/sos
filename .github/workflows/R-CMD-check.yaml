@@ -46,12 +46,16 @@ jobs:
 
       - name: Install tikz.tex and ks
         run: |
-          install.packages(c('tinytex', 'ks')) # Maybe tinytex is already there?
+          install.packages('ks')
+          install.packages('tinytex') # Maybe tinytex is already there?
           tinytex::parse_install(
              text = "! LaTeX Error: File `tikz.sty' not found."
           )
           tinytex::parse_install(
              text = "! LaTeX Error: File `fancyhdr.sty' not found."
+          )
+          tinytex::parse_install(
+             text = "! LaTeX Error: File ``pslatex.sty' not found."
           )
         shell: Rscript {0} 
 
