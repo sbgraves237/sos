@@ -57,6 +57,9 @@ jobs:
              text = "! LaTeX Error: File `pslatex.sty' not found."
           )
           tinytex::parse_install(
+             text = "! LaTeX Error: File `grfext.sty' not found."
+          )
+          tinytex::parse_install(
              text = "LaTeX errors: ! Font T1/ppl/m/n/10=pplr8t at 10.0pt not loadable: Metric (TFM) file not found"
           )
           install.packages('remotes')
