@@ -8,5 +8,6 @@ Maintainer: Spencer Graves <spencer.graves@prodsyse.com>
 Description: Search contributed R packages, sort by package.
 License: GPL (>= 2)
 Depends: brew
-Suggests: RODBC, WriteXLS, fda
+Suggests: RODBC, WriteXLS 
+Imports:  fda
 Language: en-us
