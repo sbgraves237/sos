@@ -43,6 +43,15 @@ jobs:
 
       - uses: r-lib/actions/setup-pandoc@v1
 
+
+      - name: Install tikz.tex and ks
+        run: |
+          install.packages(c('tinytex', 'ks')) # Maybe tinytex is already there?
+          tinytex::parse_install(
+             text = "! LaTeX Error: File `tikz.sty' not found."
+          )
+        shell: Rscript {0} 
+
       - name: Query dependencies
         run: |
           install.packages('remotes')
