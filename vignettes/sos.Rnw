@@ -108,6 +108,7 @@ help.search('Petal.Length')
 @
 When this failed, many users might then try
 <<PL.RSiteSearch>>=
+library(sos)
 if(!CRAN()){
   RSiteSearch('Petal.Length')
 }
@@ -118,7 +119,6 @@ when it was tried one day (and 62 matches a few months later).
 only the help pages.  We can get something similar and for
 many purposes more useful, as follows:
 <<Petal.Length.sos>>=
-library(sos)
 PL <- findFn('Petal.Length')
 @
 {\tt PL} is a data frame of class {\tt "findFn"} identifying
