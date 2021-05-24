@@ -37,7 +37,7 @@ writeFindFn2xls <- function(x,
 ##
 ## Don't write a file for CRAN 
 ##
-  if(requireNamespace("fda") && fda::CRAN()){
+  if(fda::CRAN()){
     cat('write nothing on CRAN')
   } else {
 ##
