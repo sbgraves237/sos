@@ -208,7 +208,7 @@ findFn(string, maxPages = 100, sortby = NULL,
 \examples{
 # Skip these tests on CRAN,
 # because they take more than 5 seconds
-if(requireNamespace("fda") && !fda::CRAN()){
+if(!fda::CRAN()){
 
 z <- findFn("spline", maxPages = 2)
 # alternative
