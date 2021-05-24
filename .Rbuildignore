@@ -1,0 +1,5 @@
+^CRAN-RELEASE$
+cran-comments.md
+revdep
+^\.github$
+^README\.Rmd$
