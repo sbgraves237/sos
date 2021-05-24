@@ -73,7 +73,10 @@ CRAN(CRAN_pattern, n_R_CHECK4CRAN)
 }
 \seealso{
   \code{\link{Sys.getenv}}
-  \code{\link}
+  \code{\link[testthat]{skip_on_cran}}, which uses 
+  ["the NOT_CRAN env var set by devtools and friends"](https://testthat.r-lib.org/reference/skip.html).  This 
+  \code{CRAN} functon does NOT require a user to 
+  set any environment variable. 
 }
 \examples{
 % Look in sos-ex.Rout
