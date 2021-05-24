@@ -82,11 +82,6 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
           restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
 
-      - name: Install macOS dependencies
-	if: runner.os == 'macOS'
-	run: |
-  	  wget https://github.com/XQuartz/XQuartz/releases/download/XQuartz-2.8.1/XQuartz-2.8.1.dmg
-
       - name: Install system dependencies
         if: runner.os == 'Linux'
         run: |
