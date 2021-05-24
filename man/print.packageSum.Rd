@@ -68,7 +68,7 @@
 \examples{
 splineHelp <- findFn("spline", maxPages = 2)
 splinePkgs <- packageSum(splineHelp)
-if(requireNamespace("fda") && !fda::CRAN()){
+if(!fda::CRAN()){
   print(splinePkgs, 'console')
   splinePkgs # all columns in a browser
 }
