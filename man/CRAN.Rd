@@ -73,6 +73,7 @@ CRAN(CRAN_pattern, n_R_CHECK4CRAN)
 }
 \seealso{
   \code{\link{Sys.getenv}}
+  \code{\link}
 }
 \examples{
 % Look in sos-ex.Rout
