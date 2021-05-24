@@ -108,7 +108,7 @@ help.search('Petal.Length')
 @
 When this failed, many users might then try
 <<PL.RSiteSearch>>=
-if(!fda::CRAN()){
+if(requireNamespace("fda") && !fda::CRAN()){
   RSiteSearch('Petal.Length')
 }
 @
@@ -192,7 +192,7 @@ Almost four years ago, the lead author of this article decided he
 needed to learn more about splines.  A literature search
 began as follows:
 <<RSiteSearch-spline,results=hide>>=
-if(!fda::CRAN()){
+if(requireNamespace("fda") && !fda::CRAN()){
   RSiteSearch('spline')
 }
 @
@@ -216,7 +216,7 @@ While preparing this manuscript, this command identified
 \Sexpr{splineHits$hits} documents as of \Sexpr{splineHits$date}.  That is too many.  It can be
 restricted to functions as follows:
 <<RSiteSearch-spline-fun,results=hide>>=
-if(!fda::CRAN()){
+if(requireNamespace("fda") && !fda::CRAN()){
   RSiteSearch('spline', 'fun')
 }
 @
@@ -253,7 +253,7 @@ has that name.
 To look for help pages whose name includes the characters
 \samp{spline}, we can use {\tt grepFn}:
 <<sos-spline-grep,results=hide>>=
-if(!fda::CRAN()){
+if(requireNamespace("fda") && !fda::CRAN()){
   grepFn('spline', splineAll, ignore.case = TRUE)
 }
 @
