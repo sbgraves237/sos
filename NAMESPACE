@@ -10,7 +10,6 @@ importFrom("utils", "browseURL", "flush.console", "help",
      "install.packages", "packageDescription", "vignette",
      "write.csv")
 importFrom('brew', 'brew')
-importFrom('fda', 'CRAN')
 
 S3method("[", findFn)
 
