@@ -112,11 +112,28 @@ findFn <- function(string,
 ##
 ## 2.  Set up query
 ##
+## the following no longer works properly with R 4.1.0:  
   if (substr(string, 1, 1) != "{") {
     string <- gsub(" ", "+", string)
   } else {
     ## scan(url(...)) fails with spaces
     string <- gsub(" ", "%20", string)
+  }
+## With R 4.1.0, the previous code for parseHTML
+## no longer worked with "{...}" to search for 
+## a string, not multiple words.
+## However, RSiteSearch('{...}') worked ...
+## by searching for '"..."'.  
+## SO if string begins with "{" and ends woth "}", 
+## wrap that in double quotes 
+## UNLESS it contains a double quote, 
+## in which case give a warning.
+  string <- gsub(" ", "+", string)
+  ns <- nchar(string)
+  if((substring(string, 1, 1) == '{') &&
+     (substring(string, ns, ns) == "}")){
+    substring(string, 1, 1) <- '"'
+    substring(string, ns, ns) <- '"'
   }
   fmt <- paste("https://search.r-project.org/?",
           "P=%s&HITSPERPAGE=20&FMT=xml&SORT=&DB=cran-help&DB=r-help",
