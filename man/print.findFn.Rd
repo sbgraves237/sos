@@ -65,7 +65,7 @@
 }
 \examples{
 splineSearch <- findFn("spline", maxPages = 2)
-if(CRAN()){
+if(!CRAN()){
   print(splineSearch, 'console')
   splineSearch # all columns in a browser
 }
