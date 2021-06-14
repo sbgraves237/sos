@@ -214,6 +214,10 @@ z <- findFn("spline", maxPages = 2)
 # alternative
 zq <- ???spline(2)
 
+# Confirm z == zq except for 'call' 
+  attr(z, 'call') <- NULL
+  attr(zq, 'call') <- NULL
+
 \dontshow{stopifnot(}
 all.equal(z, zq)
 \dontshow{)}
@@ -229,24 +233,6 @@ matches(RSS.) # list(nrow = 0, matches = 0)
 # example in which resulting page has some unicode characters
 Lambert <- findFn("Lambert")
 Lambert
-##
-## Too many matches
-##
-fa <- findFn('factor analysis')
-# Finds too many matches to process;
-# reports Inf matches but returns none.
-# When this happens, use a more restrictive search
-
-# check
-fa0 <- RSS.[seq(1, length=0),]
-attr(fa0, 'matches') <- Inf
-attr(fa0, 'PackageSummary') <- PackageSummary(fa0)
-attr(fa0, 'string') <- 'factor+analysis'
-attr(fa0, 'call') <- call('findFn', string = "factor analysis")
-
-\dontshow{stopifnot(}
-all.equal(fa, fa0)
-\dontshow{)}
 }
 }
 \keyword{misc}
