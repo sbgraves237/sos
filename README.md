@@ -12,7 +12,7 @@ The `sos` package provides the fastest literature search I know for
 anything statistical. It queries the `RSiteSearch` database and sorts
 the results by package not just help page. The package includes a
 vignette reprinted from [*The R
-Journal*’’\*](https://journal.r-project.org/archive/2009/RJ-2009-017/RJ-2009-017.pdf).
+Journal*](https://journal.r-project.org/archive/2009/RJ-2009-017/RJ-2009-017.pdf).
 
 ## Installation
 
@@ -58,7 +58,7 @@ taps in the default browser: The first has links to individual help
 pages sorted by package. The second is a package summary.
 
 The current version of `sos` extracts some information only from
-installed packages. You can install the leading pagkages in a search as
+installed packages. You can install the leading packages in a search as
 follows:
 
 ``` r
