@@ -64,8 +64,8 @@ CRAN(CRAN_pattern, n_R_CHECK4CRAN)
   a logical scalar with attributes 
   \code{'Sys.getenv'} containing the 
   results of \code{Sys.getenv()} and 
-  'matches' contining \code{i} per step 3
-  above.
+  'matches' containing \code{i} per step 
+  3 above.
 }
 \author{
   Spencer Graves (copied from the 
@@ -75,7 +75,7 @@ CRAN(CRAN_pattern, n_R_CHECK4CRAN)
   \code{\link{Sys.getenv}}
   \code{\link[testthat]{skip_on_cran}}, which uses 
   ["the NOT_CRAN env var set by devtools and friends"](https://testthat.r-lib.org/reference/skip.html).  This 
-  \code{CRAN} functon does NOT require a user to 
+  \code{CRAN} function does NOT require a user to 
   set any environment variable. 
 }
 \examples{
@@ -92,7 +92,10 @@ gete <- attr(cran, 'Sys.getenv')
 iget <- grep('^_', names(gete))
 gete[iget]
 
-\dontrun{
+#\dontrun is sometimes run on CRAN.  See
+#https://github.com/ThinkR-open/prepare-for-cran
+#accessed 2021-06-14
+if (interactive()) {
 if(CRAN()){
   stop('CRAN')
 } else {
