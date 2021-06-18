@@ -14,3 +14,7 @@
 *    Ubuntu Linux 20.04.1 LTS, R-release, GCC
 *    Fedora Linux, R-devel, clang, gfortran
 ## NOTE: Package unavailable to check Rd xrefs: ‘testthat’
+
+## revdepcheck: 0 new problems
+## checked 3 of 4 reverse dependencies; 
+## Failed to check RcmdrPlugin.sos (NA)
