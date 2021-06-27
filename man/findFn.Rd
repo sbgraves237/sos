@@ -233,6 +233,10 @@ matches(RSS.) # list(nrow = 0, matches = 0)
 # example in which resulting page has some unicode characters
 Lambert <- findFn("Lambert")
 Lambert
+
+# Example that "found  2  link(s) without dates" on 2021-06-26
+webScr <- findFn('web scraping')
+
 }
 }
 \keyword{misc}
