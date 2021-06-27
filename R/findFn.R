@@ -64,10 +64,31 @@ findFn <- function(string,
     hitRows <- html[grep("^<results .* Matches=", html, useBytes = TRUE)]
     Hits <- as.numeric(sub("^<results .*Matches=\\\"(.*)\\\" .*$", "\\1", hitRows, useBytes = TRUE))
 #   Find dates
-    DateRows <- html[grep("^<hit .* modtime=", html, useBytes = TRUE)]
+    dateRows <- grep("^<hit .* modtime=", html, useBytes = TRUE)
+    linkRows <- grep(".*url=", html, useBytes = TRUE)
+#   Assume linkRows == (dateRows+1)
+#   Look for links without Dates
+    linkWdate <- (linkRows %in% (dateRows+1))
+    nlWOd <- sum(!linkWdate) 
+    if(nlWOd>0){
+      cat('Note: found ', nlWOd, ' link(s) without dates:\n')
+      for(lWOd in linkRows[!linkWdate]){
+        cat(html[lWOd], '\n')
+      }
+    }
+    dateWlink <- (dateRows %in% (linkRows-1))
+    ndWOl <- sum(!dateWlink)
+    if(ndWOl>0){
+      cat("Note: found ', ndWOl, ' date(s) without links:\n")
+      for(dWOl in dateRows[!dateWlink]){
+        cat(html[dWOl], '\n')
+      }
+    }
+    DateRows <- html[dateRows[dateWlink]]
     Date <- as.numeric(sub("^<hit .*modtime=\\\"(.*)\\\".*$", "\\1", DateRows, useBytes = TRUE))
-    linksRows <- html[grep(".*url=", html, useBytes = TRUE)]
-      
+#    
+    linksRows <- html[linkRows[linkWdate]]
+#      
     pattern <-
       "^.*/(CRAN|R)/refmans/(.*)/html/(.*)\\.html.*$"
     pac <- sub(pattern, "\\2", linksRows, useBytes = TRUE)
@@ -113,12 +134,12 @@ findFn <- function(string,
 ## 2.  Set up query
 ##
 ## the following no longer works properly with R 4.1.0:  
-  if (substr(string, 1, 1) != "{") {
-    string <- gsub(" ", "+", string)
-  } else {
-    ## scan(url(...)) fails with spaces
-    string <- gsub(" ", "%20", string)
-  }
+#  if (substr(string, 1, 1) != "{") {
+#    string <- gsub(" ", "+", string)
+#  } else {
+#  ## scan(url(...)) fails with spaces
+#    string <- gsub(" ", "%20", string)
+#  }
 ## With R 4.1.0, the previous code for parseHTML
 ## no longer worked with "{...}" to search for 
 ## a string, not multiple words.
@@ -128,17 +149,19 @@ findFn <- function(string,
 ## wrap that in double quotes 
 ## UNLESS it contains a double quote, 
 ## in which case give a warning.
-  string <- gsub(" ", "+", string)
   ns <- nchar(string)
   if((substring(string, 1, 1) == '{') &&
      (substring(string, ns, ns) == "}")){
-    substring(string, 1, 1) <- '"'
-    substring(string, ns, ns) <- '"'
+    String <- gsub(" ", "%20", string)
+    substring(String, 1, 1) <- '"'
+    substring(String, ns+2, ns+2) <- '"'
+  } else {
+    String <- gsub(" ", "+", string)
   }
   fmt <- paste("https://search.r-project.org/?",
           "P=%s&HITSPERPAGE=20&FMT=xml&SORT=&DB=cran-help&DB=r-help",
                sep = "")
-  href <- sprintf(fmt, string)
+  href <- sprintf(fmt, String)
 ##
 ## 3.  Query
 ##
@@ -189,7 +212,8 @@ findFn <- function(string,
         utils::flush.console()
       }
       href.i <- sprintf("%s&[=%d", href, i)
-      ans <- rbind(ans, parseHTML(href.i))
+      ans.i <- parseHTML(href.i)
+      ans <- rbind(ans, ans.i)
     }
     if (verbose>0) cat("\n")
   } else {
@@ -246,7 +270,7 @@ findFn <- function(string,
   ##
   attr(AnSort, "matches") <- hits.
   attr(AnSort, "PackageSummary") <- packageSum
-  attr(AnSort, "string") <- string
+  attr(AnSort, "string") <- String
   attr(AnSort, "call") <- match.call()
   class(AnSort) <- c("findFn", "data.frame")
   AnSort
