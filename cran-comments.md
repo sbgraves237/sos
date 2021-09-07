@@ -1,3 +1,14 @@
+2021-09-06 
+## Test environments
+* local macOS 11.5.2, R 4.1.1 
+
+???
+* All 4 GitHub Actions:  
+*    R 4.1.0 on Win10, Mac & Ubuntu 20.04 
+*    plus R-devel on Ubuntu 20.04
+* Winbuilder:  R-release, R-devel, R-oldrelease
+* R-hub: Windows Server 2008 R2 SP1, R-devel, 32/64 bit: 
+
 2021-06-14
 ## Test environments
 * local macOS 11.4, R 4.1.0 
