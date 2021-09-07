@@ -2,23 +2,6 @@ findFn <- function(string,
                    maxPages = 100,
                    sortby = NULL,
                    verbose = 1, ...) {
-  ###########################################
-## RSiteSearch(string, "fun")
-##
-## returning a data.frame with one row for
-## each match giving package and "function" /
-## entry name, sorted with the most 
-## frequently selected package first
-##
-## with the following attributes
-## matches = total number of hits found by
-## the search
-## summary = sort(table(ans$Package));
-##   summary contains results for only the 
-##   first maxPages, so sum(summary) may be
-##   less than hits.
-##
-##
 ##
 ## 1.  Define internal function
 ## 
@@ -27,7 +10,18 @@ findFn <- function(string,
                "\\1", links, useBytes = TRUE))
     desc <- sub(".*title=\\\"(.*)\\\".*$", 
                  "\\1", links, useBytes = TRUE)
-    list(link = lnk, description = desc)
+    nl <- length(lnk)
+    nd <- length(desc)
+    if((nd>0) && (nl != nd)){
+      msg <- paste0('ERROR: length(desc) = ', nd, 
+          ' != length(lnk) = ', nl, '\n')
+      print(list(lnk, desc))
+      stop(msg)
+    }
+#       
+    nld <- min(nl, nd)
+    ild <- seq(1, length=nld)
+    list(link = lnk[ild], description = desc[ild])
   }
 #  
   parseHTML <- function(href) {
