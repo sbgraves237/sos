@@ -237,6 +237,8 @@ Lambert
 # Example that "found  2  link(s) without dates" on 2021-06-26
 webScr <- findFn('web scraping')
 
+# Example that "found 0 matches" on 2021-09-06
+findFn('{open history map}')
 }
 }
 \keyword{misc}
