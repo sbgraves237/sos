@@ -44,7 +44,7 @@ library(sos)
 (PL <- findFn('Petal.Length'))
 ```
 
-The `print` method for an object of class `findFn`, like `PL`, opens two taps in the default browser:  The first has links to individual help pages sorted by package.  The second is a package summary.  
+The `print` method for an object of class `findFn`, like `PL`, opens two tabs in the default browser:  The first has links to individual help pages sorted by package.  The second is a package summary.  
 
 The current version of `sos` extracts some information only from installed packages.  You can install the leading packages in a search as follows:  
 
