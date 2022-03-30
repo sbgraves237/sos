@@ -187,9 +187,6 @@ findFn(string, maxPages = 100, sortby = NULL,
       installed packages.
   \code{\link[utils]{RSiteSearch}},
   \code{\link[utils]{download.file}}
-  \url{http://finzi.psych.upenn.edu/search.html} 
-    for a web interface to this same search
-    capability with more general options.
   \code{findFn} searches only "Target:  Functions"
     from that site, ignoring the R-help archives.
 
