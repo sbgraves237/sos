@@ -1,3 +1,14 @@
+2021-03-29
+## sos 2.1-4 
+## Test environments:
+* local macOS 11.6.5, R 4.1.3: no errors, warning, notes
+* GitHub Actions
+*- windows, macOS, ubuntu (release): Check
+*- ubuntu (devel): no package called ‘rcmdcheck’: 
+* ---> Isn't this a problem with ubuntu (devel), not with sos? 
+* R-hub builder: OK
+
+
 2021-09-06 
 ## Test environments
 * local macOS 11.5.2, R 4.1.1 
