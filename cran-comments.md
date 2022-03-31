@@ -1,4 +1,4 @@
-2021-03-29
+2021-03-29 / 31:
 ## sos 2.1-4 
 ## Test environments:
 * local macOS 11.6.5, R 4.1.3: no errors, warning, notes
@@ -7,7 +7,8 @@
 *- ubuntu (devel): no package called ‘rcmdcheck’: 
 * ---> Isn't this a problem with ubuntu (devel), not with sos? 
 * R-hub builder: OK
-
+* Winbuilder on R-release, R-oldrelease, and R-devel all OK
+* revdepcheck checked 4 dependencies, all 4 OK. 
 
 2021-09-06 
 ## Test environments
