@@ -191,19 +191,17 @@ findFn(string, maxPages = 100, sortby = NULL,
     from that site, ignoring the R-help archives.
 
   For alternative R search capabilities, see:  
-  
-  * \url{https://search.r-project.org} 
-  
+
   * \href{https://en.wikiversity.org/wiki/Searching_R_Packages}{"Searching R Packages" on Wikiversity}
   
   * \href{https://journal.r-project.org/archive/2018/RJ-2018-058/index.html}{Julia Silge, John C. Nash, and Spencer Graves (2018) Navigating the R Package Universe, The R Journal, 10(2) 558-563.}
   
-  \url{https://search.r-project.org} for 
+  * \url{https://search.r-project.org} for 
     a list of alternative R search capabilities, 
     each of which may be best for different types 
     of inquiries.
 
-  \code{\link{findFunction}} for a completely
+  * \code{\link{findFunction}} for a completely
   different function with a similar name.
 }
 \references{
