@@ -1,7 +1,7 @@
 Package: sos
 Title: Search Contributed R Packages, Sort by Package
-Version: 2.1-4
-Date: 2022-03-29
+Version: 2.1-5
+Date: 2022-03-31
 Author: Spencer Graves [cre, aut, cph], 
     Sundar Dorai-Raj [aut], and Romain Francois [ctb]
 Maintainer: Spencer Graves <spencer.graves@prodsyse.com>
