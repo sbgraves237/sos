@@ -1,0 +1,8 @@
+.DS_Store
+.github/.DS_Store
+CRAN-RELEASE
+R/.DS_Store
+inst/.DS_Store
+inst/brew/.DS_Store
+revdep/
+^\.github$
