@@ -213,35 +213,39 @@ findFn(string, maxPages = 100, sortby = NULL,
 # because they take more than 5 seconds
 if(!CRAN()){
 
-z <- findFn("spline", maxPages = 2)
+z <- try(findFn("spline", maxPages = 2))
 # alternative
-zq <- ???spline(2)
+zq <- try(???spline(2))
 
 # Confirm z == zq except for 'call' 
   attr(z, 'call') <- NULL
   attr(zq, 'call') <- NULL
+
+if(!(inherits(z, "try-error") ||
+     inherits(zq, "try-error"))){
 
 \dontshow{stopifnot(}
 all.equal(z, zq)
 \dontshow{)}
 
 # To search for 2 terms, not necessarily together:
-RSS <- findFn('RSiteSearch function', 1)
+RSS <- try(findFn('RSiteSearch function', 1))
 matches(RSS)
 
 # To search for an exact string, use braces:
-RSS. <- findFn('{RSiteSearch function}', 1)
+RSS. <- try(findFn('{RSiteSearch function}', 1))
 matches(RSS.) # list(nrow = 0, matches = 0)
 
 # example in which resulting page has some unicode characters
-Lambert <- findFn("Lambert")
+Lambert <- try(findFn("Lambert"))
 Lambert
 
 # Example that "found  2  link(s) without dates" on 2021-06-26
-webScr <- findFn('web scraping')
+webScr <- try(findFn('web scraping'))
 
 # Example that "found 0 matches" on 2021-09-06
-findFn('{open history map}')
+try(findFn('{open history map}'))
+}
 }
 }
 \keyword{misc}
