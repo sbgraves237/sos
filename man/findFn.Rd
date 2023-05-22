@@ -176,11 +176,11 @@ findFn(string, maxPages = 100, sortby = NULL,
   its structure, and rewrote 
   \code{findFn} to match.  
 
-  Special thanks to Jonathan Baron and Andy Liaw. 
-  Baron maintained the \code{RSiteSearch} data 
-  base for many years.  Liaw and Baron created the
-  \code{RSiteSearch} function in the \code{utils}
-  package.
+  Special thanks to Jonathan Baron, and Andy 
+  Liaw. Baron maintained the 
+  \code{RSiteSearch} data base for many years.  
+  Liaw and Baron created the \code{RSiteSearch} 
+  function in the \code{utils} package. 
 }
 \seealso{
   \code{\link{help.search}} to search only 
