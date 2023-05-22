@@ -6,3 +6,4 @@ inst/.DS_Store
 inst/brew/.DS_Store
 revdep/
 ^\.github$
+.Rproj.user
