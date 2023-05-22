@@ -267,7 +267,7 @@ gCount6 <- g[6, "Count"]
 This returned a {\tt "findFn"} object identifying \Sexpr{nrow(g)} help pages.
 When this was
 run while preparing this manuscript, the sixth row was
-{\tt \Sexpr{sub("_", "\\\\_", gFunc6)}} in the
+{\tt \Sexpr{gsub("_", "\\\\_", gFunc6)}} in the
 \pkg{\Sexpr{gPac6}} package, which has a {\tt Score} of \Sexpr{gScore6}.
 (On another day, the results could be different, because
 CRAN changes over time.)  This was the sixth row in this
