@@ -2,6 +2,11 @@
 
 # https://r-pkgs.org/release.html
 
+library(usethis)
+#use_release_issue()
+# I cannot make this work.  
+# Reported to Jenny Bryan, 2023-06-16.  
+
 #20.1.  Pick a version number:  
 #       in DESCRIPTION: must be later than any version on CRAN
 #20.3.  The submission process
@@ -13,6 +18,11 @@ dir()
 PkgName <- "sos"
 PkgRegExpr <- paste0('^', PkgName, '$')
 (Pkg <- dir(pattern=PkgRegExpr))
+
+#oldDir <- setwd(Pkg)
+use_release_issue()
+use_release_issue(Pkg)
+
 
 devtools::check_win_devel(Pkg)
 devtools::check_win_release(Pkg)
