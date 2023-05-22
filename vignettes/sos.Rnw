@@ -268,11 +268,11 @@ This returned a {\tt "findFn"} object identifying \Sexpr{nrow(g)} help pages.
 When this was
 run while preparing this manuscript, the sixth row was
 {\tt \Sexpr{gsub("_", "\\\\_", gFunc6)}} in the
-\pkg{\Sexpr{gPac6}} package, which has a {\tt Score} of \Sexpr{gScore6}.
+\pkg{\Sexpr{gsub("_", "\\\\_", gPac6)}} package, which has a {\tt Score} of \Sexpr{gScore6}.
 (On another day, the results could be different, because
 CRAN changes over time.)  This was the sixth row in this
 table, because it is in the
-\pkg{\Sexpr{gPac6}} package, which had a total of \Sexpr{gCount6} help
+\pkg{\Sexpr{gsub("_", "\\\\_", gPac6)}} package, which had a total of \Sexpr{gCount6} help
 pages matching the search term, but this was the only
 one whose name matched the {\tt pattern} passed to {\tt grepFn}.
 
