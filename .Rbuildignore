@@ -1,7 +1,8 @@
 ^CRAN-RELEASE$
-cran-comments.md
+cran-comments\.md
 revdep
 ^\.github$
 ^README\.Rmd$
 ^.*\.Rproj$
+sos_release_to_CRAN\.R
 ^\.Rproj\.user$
