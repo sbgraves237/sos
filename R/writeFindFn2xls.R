@@ -11,7 +11,7 @@ writeFindFn2xls <- function(x,
 ## 1.  x not null?
 ##
   if(nrow(x) < 1) {
-    cat('No matches;  nothing written.\'n')
+    cat('No matches;  nothing written.\n')
     return(invisible(''))
   }
 ##
@@ -58,8 +58,9 @@ writeFindFn2xls <- function(x,
      if(requireNamespace('RODBC', quietly=TRUE)){
         RO <- TRUE
         xlsFile <- try(RODBC::odbcConnectExcel(file., readOnly=FALSE))
-        if(inherits(xlsFile, 'try-error')){
-          on.exit(RODBC::odbcClose(xlsFile))
+        if(!inherits(xlsFile, 'try-error')){
+          on.exit(RODBC::odbcClose(xlsFile)) 
+        } else {
 #   Create the sheets
           sum2. <- try(RODBC::sqlSave(xlsFile, sum2, tablename='PackageSum2'))
           if(inherits(sum2., 'try-error')){
