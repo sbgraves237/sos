@@ -1,11 +1,7 @@
-2021-05-22:  
+2021-05-24:  
 ## sos 2.1-5
-* 3 of 13 CRAN checks report a LaTeX error in the vignette sos.Rnw that has been in the package since that vignette was published in R Journal 1(2), 2009-12.  I am unable to replicate that error.  I cannot see what I should change in that vignette, and I do not want to change code outside this vignette, because doing so could break something else.  
-* Another 4 CRAN checks report, "The following object is masked from 'package:utils': ?"  This has been with the package since 2009.  I don't know how to fix it.  
-* I think I've fixed two other problems reported by Prof. Ripley:  
-*(1) I've wrapped all Internet accesses in help files in "try", so any attempt to access the Internet should no generate an error.  
-*(2) I think I removed 'options(repos=c(CRAN="http://cran.cnr.berkeley.edu"))'.  I cannot find it now with grep.  If it's still there, I may need help finding it.  
-
+* I believe I've fixed all the problems identified in CRAN checks and in emails from Prof. Ripley, EXCEPT for the NOTE that, "The following object is masked from 'package:utils': ?" This is code that Duncan Murdoch contributed to this package around 2009, and I don't know how to suppress it.  I asked R-pkg-devel.  Ben Bolker "This is harmless and should be accepted by CRAN".  I you disagree, I could use guidance on how to eliminate it without eliminating the functionality for which Duncan contributed code.  
+* "All checks have passed" with no errors, warnings, notes on 5 GitHub Actions (R-release on Mac, Windows, Ubuntu plus R-devel and -oldrel on Ubuntu, all latest), plus my local machine (macOS 11.7.7 with R 4.3.0), plus R-hub builder, and Winbuilder with R-release, R-oldrel, and R-devel.  And no new problems with revdepcheck.  
 
 2021-03-29 / 31:
 ## sos 2.1-4 
