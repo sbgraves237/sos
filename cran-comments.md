@@ -1,7 +1,8 @@
 2021-05-24:  
 ## sos 2.1-5
 * I believe I've fixed all the problems identified in CRAN checks and in emails from Prof. Ripley, EXCEPT for the NOTE that, "The following object is masked from 'package:utils': ?" This is code that Duncan Murdoch contributed to this package around 2009, and I don't know how to suppress it.  I asked R-pkg-devel.  Ben Bolker "This is harmless and should be accepted by CRAN".  I you disagree, I could use guidance on how to eliminate it without eliminating the functionality for which Duncan contributed code.  
-* "All checks have passed" with no errors, warnings, notes on 5 GitHub Actions (R-release on Mac, Windows, Ubuntu plus R-devel and -oldrel on Ubuntu, all latest), plus my local machine (macOS 11.7.7 with R 4.3.0), plus R-hub builder, and Winbuilder with R-release, R-oldrel, and R-devel.  And no new problems with revdepcheck.  
+* "All checks have passed" with no errors, warnings, notes on 5 GitHub Actions (R-release on Mac, Windows, Ubuntu plus R-devel and -oldrel on Ubuntu, all latest), plus my local machine (macOS 11.7.7 with R 4.3.0), and Winbuilder with R-release, R-oldrel, and R-devel.  And no new problems with revdepcheck.  
+* R-hub checks reported incorrectly that, "The Date field is over a month old." It also complained, "Problems with news in ‘NEWS’: Cannot process chunk/lines".  A web search identified requests with help on this by both Thierry Denoeux and me to R-pkg-devel last January 7 and the previous October 13 without any satisfactory response that I could find.  R-hub builder on Windows also reported that "there is no package called 'mgcv' ... 'survival' ... 'boot' ... 'MASS' ... 'lattice'.  I don't see how I can fix any of those issues.  
 
 2021-03-29 / 31:
 ## sos 2.1-4 
