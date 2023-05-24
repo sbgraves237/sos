@@ -6,3 +6,4 @@ revdep
 ^.*\.Rproj$
 sos_release_to_CRAN\.R
 ^\.Rproj\.user$
+^CRAN-SUBMISSION$
