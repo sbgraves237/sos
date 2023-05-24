@@ -62,3 +62,17 @@ release(Pkg)
 #20.5.  Submit to CRAN
 #20.6.  Update the version number for the future 
 #20.7.  Publicise
+
+#After the package has been accepted, I should DELETE 
+# CRAN-SUBMISSION 
+# UNLESS I USE 
+# usethis::use_github_release(), 
+# because then IT is supposed to delete this temporary file.
+# 
+# usethis::use_github_release() creates release notes 
+# from the NEWS bullets relevant to the current release. 
+# Note that usethis::use_github_release() depends crucially 
+# on the CRAN-SUBMISSION file that was written by 
+# devtools::submit_cran(): that’s how it knows which SHA to tag. 
+# After the successful creation of the GitHub release, 
+# use_github_release() deletes this temporary file.
