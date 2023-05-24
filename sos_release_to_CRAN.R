@@ -20,9 +20,9 @@ PkgRegExpr <- paste0('^', PkgName, '$')
 (Pkg <- dir(pattern=PkgRegExpr))
 
 #oldDir <- setwd(Pkg)
-use_release_issue()
-use_release_issue(Pkg)
-
+#use_release_issue()
+#use_release_issue(Pkg)
+# neither work for me.  
 
 devtools::check_win_devel(Pkg)
 devtools::check_win_release(Pkg)
