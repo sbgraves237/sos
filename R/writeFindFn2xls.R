@@ -49,7 +49,7 @@ writeFindFn2xls <- function(x,
           WXo <- try(WriteXLS::WriteXLS(c('sum2', 'x2.', 'cl'),
                  ExcelFileName=file.,
                  SheetNames=c('PackageSum2', 'findFn', 'call') ))
-          if(inherits(WXo, 'try-error'))return(invisible(file.))
+          if(!inherits(WXo, 'try-error'))return(invisible(file.))
         }
       }
 ##
@@ -59,17 +59,16 @@ writeFindFn2xls <- function(x,
         RO <- TRUE
         xlsFile <- try(RODBC::odbcConnectExcel(file., readOnly=FALSE))
         if(!inherits(xlsFile, 'try-error')){
-          on.exit(RODBC::odbcClose(xlsFile)) 
-        } else {
+          on.exit(try(RODBC::odbcClose(xlsFile))) 
 #   Create the sheets
           sum2. <- try(RODBC::sqlSave(xlsFile, sum2, tablename='PackageSum2'))
-          if(inherits(sum2., 'try-error')){
+          if(!inherits(sum2., 'try-error')){
             x. <- try(RODBC::sqlSave(xlsFile, as.data.frame(x2),
                                    tablename='findFn'))
 #
-            if(inherits(x., 'try-error')){
+            if(!inherits(x., 'try-error')){
               cl. <- try(RODBC::sqlSave(xlsFile, cl, tablename='call'))
-              if(inherits(cl., 'try=error'))return(invisible(file.))
+              if(!inherits(cl., 'try=error'))return(invisible(file.))
             }
           }
         }
