@@ -1,4 +1,4 @@
-# sos 2.1-5
+# sos 2.1-6
 
 * Fix problems identified in CRAN checks and add `try` to `*.Rd` files, so the package does not fail without adequate Internet support. 2023-05-24.  
 
