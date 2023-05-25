@@ -53,3 +53,5 @@ installPackages(PL)
 PL
 ```
 
+For more see the companion vignette, which appeared as [Spencer Graves, Sundar Dorai-Raj and Romain François, "sos: Searching Help Pages of R Packages", *The R Journal*, **1**(2)56-59](https://journal.r-project.org/articles/RJ-2009-017/).
+
