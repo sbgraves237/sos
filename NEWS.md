@@ -8,15 +8,15 @@
 
 # sos 2.1-0
 
-* Update to fix problems with R 4.1.0, especially `???spline(2)` no longer recognized maxPages=2 and took the default instead.  Fixed. 2021-06-14.  
+* Update to fix problems with R 4.1.0, especially `???spline(2)` no longer recognized `maxPages`=2 and took the default instead.  Fixed. 2021-06-14.  
 
 # sos 2.0-2
 
-* Delete inappropraite file and directory. 2020-10-19 
+* Delete inappropriate file and directory. 2020-10-19 
 
-# sos 2.0-
+# sos 2.0-1
 
-* Fix CRAN check pblms.  2020-10-18.
+* Fix CRAN check problems.  2020-10-18.
 
 # sos 2.0-0
 
@@ -49,7 +49,7 @@
 # sos 0.1-6
 
 * Add function `PackageSummary` to compute the summary
-previously done inside `RSiteSearch.function`, convertinng it
+previously done inside `RSiteSearch.function`, converting it
 to a `data.frame` and adding the `Date`.
 
 # sos 0.1-5
