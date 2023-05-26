@@ -9,8 +9,8 @@
   Returns a data.frame from
   \code{\link[utils]{RSiteSearch}(string, "function")} 
   which can be sorted and subsetted by user
-  specifications and viewed in an HTML table.  The
-  default sort puts first packages with the most
+  specifications and viewed in an \code{HTML} table.  
+  The default sort puts first packages with the most
   matches (\code{Count}), with ties broken using 
   the sum of the match scores for all the hits in
   that package (\code{TotalScore}), etc.
