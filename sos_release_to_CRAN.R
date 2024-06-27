@@ -2,6 +2,9 @@
 
 # https://r-pkgs.org/release.html
 
+# First open project in this package directory
+# Then open this file. 
+
 library(usethis)
 #use_release_issue()
 # I cannot make this work.  
