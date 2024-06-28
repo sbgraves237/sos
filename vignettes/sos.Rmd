@@ -1,8 +1,12 @@
 ---
 title: "Searching help pages of R packages"
 author: "Spencer Graves, Sundar Dorai-Raj, and Romain François"
-date: "2024-06-27"
-output: html_document
+date: "2024-06-28"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteEngine{knitr::knitr}
+  %\VignetteIndexEntry{Title of your vignette}
+  %\usepackage[UTF-8]{inputenc}
 ---
 
 ```{r setup, include=FALSE}
