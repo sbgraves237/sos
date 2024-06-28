@@ -249,7 +249,7 @@ following three worksheets:
 package with a matching help page, enhanced by providing
 information for locally installed packages
 not available in the `findFn` object.
-* The **{findFn** sheet contains the search results.
+* The **findFn** sheet contains the search results.
 * The **call** sheet gives the call to `findFn` that generated these search results.
 
 If `writeFindFn2xls` cannot produce an Excel file with
@@ -281,7 +281,7 @@ splineAll <- findFn('spline', maxPages = 999)
 #installPackages(splineAll)
 writeFindFn2xls(splineAll)
 ```
-```{f install-and-write-options-undo,echo=FALSE}
+```{r install-and-write-options-undo,echo=FALSE}
 options(op)
 ```
 
