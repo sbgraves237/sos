@@ -1,3 +1,9 @@
+2024-06-28
+## sos2.1-8
+* fixed \itemize problems created by deprecation of 
+\item{}{} on recommendation from Patrice Kiener. 
+* fix intermittent bug in writeFindFn2xls
+
 2021-05-26:  
 ## sos 2.1-7
 * I believe I've fixed all the problems identified in CRAN checks and in emails from Prof. Ripley, EXCEPT for the NOTE that, "The following object is masked from 'package:utils': ?" This is code that Duncan Murdoch contributed to this package around 2009, and I don't know how to suppress it.  I asked R-pkg-devel.  Ben Bolker replied, "This is harmless and should be accepted by CRAN".  If you disagree, I could use guidance on how to eliminate it without eliminating the functionality for which Duncan contributed code.  
