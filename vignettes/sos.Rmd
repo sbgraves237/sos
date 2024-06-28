@@ -4,13 +4,16 @@ author: "Spencer Graves, Sundar Dorai-Raj, and Romain François"
 date: "2024-06-28"
 output: rmarkdown::html_vignette
 vignette: >
+  %\VignetteIndexEntry{Searching help pages of R packages}
   %\VignetteEngine{knitr::knitr}
-  %\VignetteIndexEntry{Title of your vignette}
-  %\usepackage[UTF-8]{inputenc}
+  %\VignetteEncoding{UTF-8}
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
 ```
 
 This vignette was originally published in *The R Journal*, vol. 1(2) in 2009. The package and this vignette have been changed since then to make the package easier to use and to adjust to changes in the R ecosystem. 
