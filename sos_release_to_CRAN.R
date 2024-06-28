@@ -6,7 +6,7 @@
 # Then open this file. 
 
 library(usethis)
-#use_release_issue()
+#usethis::use_release_issue()
 # I cannot make this work.  
 # Reported to Jenny Bryan, 2023-06-16.  
 
@@ -18,18 +18,9 @@ library(usethis)
 # devtools::check_win_*()
 dir()
 
-PkgName <- "sos"
-PkgRegExpr <- paste0('^', PkgName, '$')
-(Pkg <- dir(pattern=PkgRegExpr))
-
-#oldDir <- setwd(Pkg)
-#use_release_issue()
-#use_release_issue(Pkg)
-# neither work for me.  
-
-devtools::check_win_devel(Pkg)
-devtools::check_win_release(Pkg)
-devtools::check_win_oldrelease(Pkg)
+devtools::check_win_devel()
+devtools::check_win_release()
+devtools::check_win_oldrelease()
 
 devtools::check_rhub(Pkg)
 
