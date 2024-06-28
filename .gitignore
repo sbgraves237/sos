@@ -9,3 +9,4 @@ inst/brew/.DS_Store
 revdep/
 ^\.github$
 .Rproj.user
+inst/doc
