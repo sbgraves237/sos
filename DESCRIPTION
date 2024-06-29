@@ -7,7 +7,7 @@ Author: Spencer Graves [cre, aut, cph],
 Maintainer: Spencer Graves <spencer.graves@prodsyse.com>
 Description: Search contributed R packages, sort by package.
 License: GPL (>= 2)
-Depends: brew
+Depends: R (>= 3.5.0), brew
 Suggests: 
     RODBC,
     WriteXLS,
