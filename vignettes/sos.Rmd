@@ -7,7 +7,6 @@ vignette: >
   %\VignetteIndexEntry{Searching help pages of R packages}
   %\VignetteEngine{knitr::knitr}
   %\VignetteEncoding{UTF-8}
-  \usepackage[utf8]{inputenc}
 ---
 
 ```{r, include = FALSE}
@@ -15,5 +14,9 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+```
+
+```{r setup}
+library(sos)
 ```
 
