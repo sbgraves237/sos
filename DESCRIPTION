@@ -14,7 +14,6 @@ Suggests:
     testthat,
     knitr,
     rmarkdown
-    markdown
 Language: en-us
 URL: https://github.com/sbgraves237/sos
 BugReports: https://github.com/sbgraves237/sos/issues
