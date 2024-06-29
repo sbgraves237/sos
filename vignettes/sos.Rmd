@@ -325,12 +325,10 @@ The **PackageSum2** sheet of an Excel file produced by `writeFindFn2xls` (after 
 
 The `findFn` capability can also reduce the risk of "the researcher's nightmare" of being told after substantial work that someone else has already done it.
 
-Users of `sos` may also wish to consult [Crantastic](http://www.crantastic.org/), which allows users to tag, rate, and view packages.  (The coverage of Crantastic includes current and orphaned CRAN packages, while^[@JB09URL] also includes 'most of the default packages from Bioconductor and all of Jim Lindsey's packages.')
-
 ## Acknowledgments
 
 The capabilities described here extend the power of the
-R Site Search search engine originally maintained by Jonathan Baron. Without Prof. Baron's support, it would not have been feasible to develop the features described here. Duncan Murdoch, Marc Schwarz, Dirk Eddelbuettel, Gabor Grothendiek and anonymous referees contributed suggestions for improvement, but of course can not be blamed for any deficiencies.  The collaboration required to produce the current `sos` package was greatly facilitated by R-Forge^[@RFORGE09URL]. The `sos` package is part of the R Site Search project hosted there.  This project also includes code for a Firefox extension to simplify the process of finding information about R from within Firefox.  This Firefox extension is still being developed with the current version downloadable from [http://addictedtor.free.fr/rsitesearch](http://addictedtor.free.fr/rsitesearch).
+R Site Search search engine originally maintained by Jonathan Baron. Without Prof. Baron's support, it would not have been feasible to develop the features described here. Duncan Murdoch, Marc Schwarz, Dirk Eddelbuettel, Gabor Grothendiek and anonymous referees contributed suggestions for improvement, but of course can not be blamed for any deficiencies.  The collaboration required to produce the current `sos` package was greatly facilitated by R-Forge^[@RFORGE09URL]. The `sos` package is part of the R Site Search project hosted there.  This project also includes code for a Firefox extension to simplify the process of finding information about R from within Firefox.  This Firefox extension is still being developed with the current version downloadable from [http://addictedtor.free.fr/rsitesearch](http://addictedtor.free.fr/rsitesearch/).
 
 Spencer Graves 
 EffectiveDefense.org 
