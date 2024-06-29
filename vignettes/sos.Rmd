@@ -25,8 +25,7 @@ This vignette was originally published in *The R Journal*, vol. 1(2) in 2009. Th
 
 ## Abstract
 
-The `sos` package provides a means to quickly and
-flexibly search the help pages of contributed packages, finding functions and datasets in seconds or minutes that could not be found in hours or days by any other means we know.  Its `findFn` function searches [the search site https://search.r-project.org](https://search.r-project.org) used by the [`RSiteSearch`](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/RSiteSearch.html) function but returnsthe matches in a [`data.frame`](https://www.stat.ethz.ch/R-manual/R-devel/library/base/html/data.frame.html) of class `findFn`, which can be further manipulated by other `sos` functions to produce, for example, an Excel file that starts with a summary sheet that makes it relatively easy to prioritize alternative packages for further study. As such, it provides a very powerful way to do a literature search for functions and packages relevant to a particular topic of interest and could become virtually mandatory for authors of new packages or papers in publications such as *The R Journal* and the *Journal of Statistical Software*.
+The `sos` package provides a means to quickly and flexibly search the help pages of contributed packages, finding functions and datasets in seconds or minutes that could not be found in hours or days by any other means we know.  Its `findFn` function searches [the search site `https://search.r-project.org`](https://search.r-project.org) used by the [`RSiteSearch`](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/RSiteSearch.html) function but returns the matches in a [`data.frame`](https://www.stat.ethz.ch/R-manual/R-devel/library/base/html/data.frame.html) of class `findFn`, which can be further manipulated by other `sos` functions to produce, for example, an Excel file that starts with a summary sheet that makes it relatively easy to prioritize alternative packages for further study. As such, it provides a very powerful way to do a literature search for functions and packages relevant to a particular topic of interest and could become virtually mandatory for authors of new packages or papers in publications such as *The R Journal* and the *Journal of Statistical Software*.
 
 ## Introduction
 
@@ -226,7 +225,7 @@ This returned a `findFn` object identifying `r nrow(g)` help pages. When this wa
 
 We could next `print` the `splineAll` `findFn` object.  However, it may not be easy to digest a table with 739 rows (or however many rows it produces when you run it). 
 
-`summary(splineAll)` would tell us that the `r nrow(splineAll)` help pages came from `r nPacSplineAll` different packages and display the first `minPackages = 12` such packages. (If other packages had the same number ofm matches as the twelfth package, they would also appear in this summary. `minPackages is an argument of the `summary.findFn` function and can be changed if the user wishes.) 
+`summary(splineAll)` would tell us that the `r nrow(splineAll)` help pages came from `r nPacSplineAll` different packages and display the first `minPackages = 12` such packages. (If other packages had the same number of matches as the twelfth package, they would also appear in this summary. `minPackages is an argument of the `summary.findFn` function and can be changed if the user wishes.) 
 
 A more complete view can be obtained in MS Excel format using the `writeFindFn2xls` function:
 
@@ -294,8 +293,7 @@ The resulting `splineAll.xls` file can help establish priorities for further stu
 
 ## Combining search results 
 
-The lead author of this article recently gave an invited presentation on "Fitting Nonlinear Differential Equations to Data in R"^[[Workshop
-on Statistical Methods for Dynamic System Models, Vancouver, 2009: http://stat.sfu.ca/~dac5/workshop09/Spencer_Graves.html](http://people.stat.sfu.ca/~dac5/workshop09/Spencer_Graves.html). A key part of preparing for that presentation was a search of
+The lead author of this article recently gave an invited presentation on "Fitting Nonlinear Differential Equations to Data in R"^[[Workshop on Statistical Methods for Dynamic System Models, Vancouver, 2009: `http://stat.sfu.ca/~dac5/workshop09/Spencer_Graves.html`](http://people.stat.sfu.ca/~dac5/workshop09/Spencer_Graves.html). A key part of preparing for that presentation was a search of
 contributed R code, which proceeded roughly as follows:
 
 ```{R differntial-equations,results='hide'}
@@ -328,7 +326,7 @@ The `findFn` capability can also reduce the risk of "the researcher's nightmare"
 ## Acknowledgments
 
 The capabilities described here extend the power of the
-R Site Search search engine originally maintained by Jonathan Baron. Without Prof. Baron's support, it would not have been feasible to develop the features described here. Duncan Murdoch, Marc Schwarz, Dirk Eddelbuettel, Gabor Grothendiek and anonymous referees contributed suggestions for improvement, but of course can not be blamed for any deficiencies.  The collaboration required to produce the current `sos` package was greatly facilitated by R-Forge^[@RFORGE09URL]. The `sos` package is part of the R Site Search project hosted there.  This project also includes code for a Firefox extension to simplify the process of finding information about R from within Firefox.  This Firefox extension is still being developed with the current version downloadable from [http://addictedtor.free.fr/rsitesearch](http://addictedtor.free.fr/rsitesearch/).
+R Site Search search engine originally maintained by Jonathan Baron. Without Prof. Baron's support, it would not have been feasible to develop the features described here. Duncan Murdoch, Marc Schwarz, Dirk Eddelbuettel, Gabor Grothendiek and anonymous referees contributed suggestions for improvement, but of course can not be blamed for any deficiencies.  The collaboration required to produce the current `sos` package was greatly facilitated by R-Forge^[@RFORGE09URL]. The `sos` package is part of the R Site Search project hosted there.  This project also includes code for a Firefox extension to simplify the process of finding information about R from within Firefox.  This Firefox extension is still being developed with the current version downloadable from [`http://addictedtor.free.fr/rsitesearch`](http://addictedtor.free.fr/rsitesearch/).
 
 Spencer Graves 
 EffectiveDefense.org 
