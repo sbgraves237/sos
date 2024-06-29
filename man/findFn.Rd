@@ -171,7 +171,7 @@ findFn(string, maxPages = 100, sortby = NULL,
   \code{RSiteSearch} data base for many years.  
   Liaw and Baron created the \code{RSiteSearch} 
   function in the \code{utils} package. 
-  Thanks also to Patrice Kiener of InModelia
+  Thanks also to Patrice Kiener of `InModelia`
   in Paris, France, who helped me fix some syntax 
   problems stemming from changes in how an 
   itemized list is described in a *.Rd file. 
