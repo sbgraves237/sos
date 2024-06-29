@@ -1,7 +1,9 @@
-2024-06-28
+2024-06-29
 ## sos2.1-8
+* R CMD check results clean on 5 platforms via GitHub Action (Mac, Windows and Ubuntu on current and Ubuntu on devel and oldrel), plus devtools::check_win_devel, _release, and oldrelease plus check_rhub. No problems with revdep_check. 
+
 * fixed \itemize problems created by deprecation of 
-\item{}{} on recommendation from Patrice Kiener. 
+\item{}{} 
 * fix intermittent bug in writeFindFn2xls
 
 2021-05-26:  
