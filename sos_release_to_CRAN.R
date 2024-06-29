@@ -7,6 +7,7 @@
 
 library(usethis)
 #usethis::use_release_issue()
+use_release_issue()
 # I cannot make this work.  
 # Reported to Jenny Bryan, 2023-06-16.  
 
@@ -18,11 +19,13 @@ library(usethis)
 # devtools::check_win_*()
 dir()
 
+devtools::check()
+
 devtools::check_win_devel()
 devtools::check_win_release()
 devtools::check_win_oldrelease()
 
-devtools::check_rhub(Pkg)
+devtools::check_rhub()
 
 #20.3.3.  Reverse dependencies
 
