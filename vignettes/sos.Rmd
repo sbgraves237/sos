@@ -5,7 +5,7 @@ date: "2024-06-28"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Searching help pages of R packages}
-  %\VignetteEngine{knitr::knitr}
+  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
