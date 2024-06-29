@@ -17,4 +17,4 @@ Suggests:
 Language: en-us
 URL: https://github.com/sbgraves237/sos
 BugReports: https://github.com/sbgraves237/sos/issues
-VignetteBuilder: knitr
+VignetteBuilder: knitr, rmarkdown
