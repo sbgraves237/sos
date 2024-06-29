@@ -1,12 +1,13 @@
 ---
 title: "Searching help pages of R packages"
-author: "Spencer Graves, Sundar Dorai-Raj, and Romain François"
+author: "Spencer Graves, Sundar Dorai-Raj, and Romain Francois"
 date: "2024-06-28"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Searching help pages of R packages}
   %\VignetteEngine{knitr::knitr}
   %\VignetteEncoding{UTF-8}
+  \usepackage[utf8]{inputenc}
 ---
 
 ```{r, include = FALSE}
